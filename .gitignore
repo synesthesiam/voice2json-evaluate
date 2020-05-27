@@ -1,0 +1,9 @@
+.venv/
+/download/
+
+__pycache__/
+.mypy_cache/
+.doit*
+
+/results/
+/profiles/

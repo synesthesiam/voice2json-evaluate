@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+voice2json \
+    "$@" \
+    print-downloads \
+    --only-missing \
+    --no-grapheme-to-phoneme \
+    --no-open-transcription \
+    --no-mixed-language-model \
+    --no-text-to-speech \
+    'en-us_pocketsphinx-cmu'

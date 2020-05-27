@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# Split arguments on --
+before_args=()
+after_args=()
+before='true'
+
+while [[ ! -z "$1" ]]; do
+    if [[ "$1" == '--' ]]; then
+        before=''
+    elif [[ ! -z "${before}" ]]; then
+        before_args+=("$1")
+    else
+        after_args+=("$1")
+    fi
+
+    shift 1
+done
+
+# -----------------------------------------------------------------------------
+
+voice2json "${before_args[@]}" \
+    transcribe-wav --open "${after_args[@]}"

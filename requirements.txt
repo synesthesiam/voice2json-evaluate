@@ -1,0 +1,4 @@
+doit==0.32.0
+jsonlines==1.2.0
+rhasspy-nlu==0.1.8
+yattag==1.13.2
